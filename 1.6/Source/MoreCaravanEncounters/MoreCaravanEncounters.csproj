@@ -58,6 +58,9 @@
             <Link>Attached/Rimworld/%(RecursiveDir)/%(FileName)%(Extension)</Link>
             <CopyToOutputDirectory>Never</CopyToOutputDirectory>
         </Content>
+        <Content Include="..\..\..\modList.xml">
+          <Link>MoreCaravanEncounters\modList.xml</Link>
+        </Content>
     </ItemGroup>
   <ItemGroup>
         <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
@@ -73,6 +76,8 @@
   <ItemGroup>
         <ReleaseFiles Include="../../../1.*/**" Exclude="../../../1.*/Source/**" />
     <AboutFiles Include="../../../About/**" Exclude="../../../About/*.png~" />
-    <CommonFiles Include="../../../Common/**" /> <CompatibilityFiles Include="../../../Compatibility/**" />  <ExtraFiles Include="../../../loadFolders.xml;../../../LICENSE;../../../README.md;../../../CONTINUITY.md" />
+    <CommonFiles Include="../../../Common/**" /> <CompatibilityFiles Include="../../../Compatibility/**" />  <ExtraFiles Include="../../../loadFolders.xml;../../../LICENSE;../../../README.md;../../../CONTINUITY.md" />  <ReleaseFiles Update="..\..\Defs\MCE_Relic.xml">
+  <Link>MoreCaravanEncounters\1.6\Defs\MCE_Relic.xml</Link>
+</ReleaseFiles>
     </ItemGroup>
 </Project>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <IncidentDef>
+        <defName>MCE_Relic</defName>
+        <label>relic complex</label>
+        <category>Special</category>
+        <targetTags>
+            <li>Caravan</li>
+        </targetTags>
+        <workerClass>MoreCaravanEncounters.IncidentWorker_RelicComplex</workerClass>
+        <pointsScaleable>true</pointsScaleable>
+        <minRefireDays>0.17</minRefireDays>
+        <letterText>[PAWN_nameDef]'s caravan has discovered an ancient relic complex!</letterText>
+        <letterLabel>Caravan discovery!</letterLabel>
+        <letterDef>PositiveEvent</letterDef>
+        <tale>MCE_CaravanRelicComplex</tale>
+        <mtbDaysByBiome>
+            <TemperateForest>90</TemperateForest>
+            <BorealForest>90</BorealForest>
+            <TropicalRainforest>90</TropicalRainforest>
+            <AridShrubland>90</AridShrubland>
+            <Desert>90</Desert>
+            <Tundra>90</Tundra>
+            <TropicalSwamp>90</TropicalSwamp>
+            <TemperateSwamp>90</TemperateSwamp>
+            <ColdBog>90</ColdBog>
+            <ExtremeDesert>90</ExtremeDesert>
+            <IceSheet>90</IceSheet>
+            <SeaIce>90</SeaIce>
+        </mtbDaysByBiome>
+    </IncidentDef>
+
+    <TaleDef>
+        <defName>MCE_CaravanRelicComplex</defName>
+        <label>caravan discovered a relic complex</label>
+        <taleClass>Tale_SinglePawn</taleClass>
+        <type>Volatile</type>
+        <defSymbol>MATERIAL</defSymbol>
+        <baseInterest>1</baseInterest>
+        <rulePack>
+            <rulesStrings>
+                <li>tale_noun->[PAWN_nameDef]'s caravan discovered an ancient relic complex</li>
+                <li>image->[PAWN_nameFull] exploring an ancient relic complex</li>
+                <li>circumstance_phrase->sweating heavily</li>
+                <li>circumstance_phrase->wearing a [AdjectiveFriendly] expression</li>
+                <li>circumstance_phrase->smiling proudly</li>
+                <li>circumstance_phrase->a satisfied expression on [PAWN_possessive] face</li>
+                <li>circumstance_phrase->looking around warily for danger</li>
+                <li>desc_sentence->[Quantity_adjphrase] [ally]s assist.</li>
+                <li>desc_sentence->[Quantity_adjphrase] [Animal]s wander the area.</li>
+            </rulesStrings>
+        </rulePack>
+    </TaleDef>
+</Defs>
